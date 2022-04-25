@@ -1,15 +1,18 @@
 import './App.css';
+import styled from '@emotion/styled';
+import Search from "./Components/Search";
 
-const data = require('./data.json');
-import { css } from '@emotion/css'
+const AppWrapper = styled.div`
+  width: 100%;
+  min-height: 100%;
+  background: #fff;
+`
 
 function App() {
-
-    console.log('data', data)
   return (
-    <div className="App">
-      test
-    </div>
+    <AppWrapper>
+        <Search/>
+    </AppWrapper>
   );
 }
 
