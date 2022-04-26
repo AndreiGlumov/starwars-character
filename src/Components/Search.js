@@ -17,6 +17,11 @@ const Input = styled.input`
   padding: 10px;
 `
 
+const DataListWrapper = styled.div`
+  max-height: 300px;
+  overflow-y: scroll;
+`
+
 const Results = styled.div`
   border-bottom: 1px solid black;
   padding: 10px;
@@ -35,9 +40,9 @@ const Search = () => {
         <SearchContainer>
             <p>You can search any StarWars Character</p>
             <Input type="text" placeholder="Character Search" onChange={(e) => setInput(e.target.value)} />
-            <div>
+            <DataListWrapper>
                 {filteredUsers.map((person, index) => <Results key={index}>{person}</Results>)}
-            </div>
+            </DataListWrapper>
         </SearchContainer>
     )
 }
